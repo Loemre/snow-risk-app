@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">snow-risk-app</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="current_temperature">%1$s °C</string>
+
+    <!-- main activity -->
+    <string name="fabAddContentDescription">Add</string>
+    <string name="fabReloadContentDescription">Reload</string>
+    <string name="imageViewWeatherAPIContentDescription">Weather API Logo</string>
+    <string name="linkToWeatherAPI">Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></string>
+
+    <!-- add new customer -->
+    <string name="hint_customer">Customer name…</string>
+    <string name="button_save">Save Customer</string>
+    <string name="no_customer_inserted">Customer not saved because input is empty</string>
+
+</resources>
