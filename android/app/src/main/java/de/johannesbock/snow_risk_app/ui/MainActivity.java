@@ -13,8 +13,10 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -80,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
                             CustomerRepository.getInstance(MainActivity.this.getApplication())
                                     .updateOneCustomerFromAPI(MainActivity.this.getApplication(), customer.getName());
                         } else {
-                            View view = findViewById(R.id.content).getRootView();
-                            Snackbar.make(view, R.string.no_customer_inserted, Snackbar.LENGTH_LONG)
-                                    .setAction("Action", null).show();
+                            Log.d(TAG, "no customer input");
                         }
                     }
                 });

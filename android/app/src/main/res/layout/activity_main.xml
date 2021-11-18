@@ -5,14 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Snow Risk App"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLinkBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeadline"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewWeatherAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:contentDescription="@string/imageViewWeatherAPIContentDescription"
+            app:srcCompat="@drawable/weatherapi_logo" />
+
+        <TextView
+            android:id="@+id/textViewWeatherApi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/linkToWeatherAPI" />
+    </LinearLayout>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="128dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLinkBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
@@ -27,31 +66,8 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <LinearLayout
-            android:id="@+id/linearLayoutLinkBack"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            >
-
-            <ImageView
-                android:id="@+id/imageViewWeatherAPI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/imageViewWeatherAPIContentDescription"
-                app:srcCompat="@drawable/weatherapi_logo" />
-
-            <TextView
-                android:id="@+id/textViewWeatherApi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/linkToWeatherAPI" />
-        </LinearLayout>
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
