@@ -150,3 +150,4 @@ What could be done next?
 * Clickable cards with more information and the forecast for the next two days
 * Make customers deletable
 * Alphabetical or sort by risk? Let the user choose
+* When does it snow? Show the time of predicted heavy snow fall
