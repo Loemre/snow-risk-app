@@ -243,6 +243,10 @@ public class CustomerRepository {
 
             if(text.toLowerCase().contains("heavy snow")) {
                 risk = 5;
+                if(text.toLowerCase().contains("moderate")){
+                    // special case, sometimes it is moderate or high, then choose risk factor 4
+                    risk = 4;
+                }
             } else if(text.toLowerCase().contains("blowing snow") && risk < 4) {
                 // special case, lots of snow and wind, bit less than heavy
                 risk = 4;
