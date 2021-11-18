@@ -21,13 +21,14 @@ There are 5 steps of risk or no risk. If the weather API responds with no snow a
 * Risk 2: A small risk of snow (chance of snow between 21 and 40), displays yellow snowflake and the text "40% risk of snow"
 * Risk 3: A medium risk of snow (medium snow in text or chance of snow between 41 and 60), displays orange snowflake and the text "60% risk of snow"
 * Risk 4: A risk of snow (chance of snow between 61 and 80 or blow snow), displays light red snowflake and the text "80% risk of snow"
+    * special case moderate or high snow will result in Risk 4 (between moderate and high)  
 * Risk 5: A high risk of snow (heavy snow or chance of snow betwenn 81 and 100, display dark red snowflake and the text "100% risk of snow"
 
 The texts may hold more information like patchy or shower snow. These information are not important for the risk calculation in this case.
 
 # The UI
 
-The app displays all costumers as an own card view which displays the Name, the current weather as text and icon on the left side, the current temperature and the current risk on the right side (see screenshot). Two Floating Action Buttons allow to add a new customer or to refresh the list. The list is sorted descending by the risk. So all customers with a high risk are displayed at the top. 
+The app displays all costumers as an own card view which displays the Name, the current weather as text and icon on the left side with the current temperatur and the current risk on the right side (see screenshot). Two Floating Action Buttons allow to add a new customer or to refresh the list. The list is sorted descending by the risk. So all customers with a high risk are displayed at the top. 
 
 <img src="/images/screenshot-snow-risk-app.png" alt="Screenshot of the app" width="25%">
 
